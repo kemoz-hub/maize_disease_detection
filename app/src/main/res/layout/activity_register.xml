@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.134"
+        tools:visibility="invisible" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="218dp"
+        android:layout_height="664dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.13">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="REGISTER"
+            android:textColor="@color/purple_700"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnRegLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/btn_lg"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:cardBackgroundColor="@color/material_dynamic_secondary95"
+        app:cardCornerRadius="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="6dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/id_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numeric="integer"
+                        android:inputType="text"
+                        android:digits="0123456789"
+                        android:background="@color/material_dynamic_secondary95"
+                        android:drawableStart="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="6dp"
+                        android:hint="id number"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mFullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/material_dynamic_secondary95"
+                        android:drawableStart="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="6dp"
+                        android:inputType="text"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                        android:hint="Fullname"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="24dp"
+                        app:passwordToggleEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="location"
+                            app:startIconDrawable="@drawable/ic_baseline_location_on_24"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            >
+
+                            <AutoCompleteTextView
+                                android:id="@+id/confirmpass"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="@color/white"
+                                android:drawablePadding="6dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:focusableInTouchMode="false"
+                                android:paddingStart="6dp"
+                                android:paddingEnd="6dp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="6dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/mPhone"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="@color/material_dynamic_secondary95"
+                                android:numeric="integer"
+                                android:drawableStart="@drawable/ic_baseline_phone_24"
+                                android:drawablePadding="6dp"
+                                android:inputType="text"
+                                android:digits="0123456789"
+                                android:hint="Phone"
+                                android:paddingStart="6dp"
+                                android:paddingEnd="6dp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/password"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/material_dynamic_secondary95"
+                            android:drawableStart="@drawable/ic_baseline_security_24"
+                            android:drawablePadding="6dp"
+                            android:hint="Password"
+                            android:inputType="textPassword"
+                            android:paddingStart="6dp"
+                            android:paddingEnd="6dp"
+                            android:password="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/material_dynamic_secondary95"
+                        android:drawableStart="@drawable/ic_baseline_email_24"
+                        android:drawablePadding="6dp"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/buttonl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_lg"
+        android:text="Register"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
